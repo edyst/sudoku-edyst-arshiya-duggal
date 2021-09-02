@@ -1,0 +1,111 @@
+body{
+    display:grid;
+    min-height:100%;
+    place-content: center;
+}
+h2{ 
+    margin-top: 0px;
+    text-align: center;
+    font-style: italic;
+    color:aqua;
+}
+.cell{
+    border:1px solid lightgray;
+}
+.prefilled{
+    background-color: #C3D7EA !important;
+}
+.cell:nth-child(3n)
+{
+    border-right:1px solid black;
+} 
+.cell:nth-child(n+19):nth-child(-n+27)
+{
+    border-bottom:1px solid black;
+} 
+.cell:nth-child(n+46):nth-child(-n+54)
+{
+    border-bottom:1px solid black;
+} 
+.cell input:focus{
+    background-color: #e2a8d4;
+}
+.board{
+    display: grid;
+    grid-template-columns: repeat(9,50px);
+    grid-template-rows: repeat(9,50px);
+    border:2px solid black;
+}
+.cell input{
+    height: 100%;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    padding: 4px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 34px;
+    caret-color: transparent;
+    font-weight: lighter;
+    cursor: default;
+}
+.animate{
+    background-color:#f0f3e2;
+}
+#game{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.end{
+    display: flex;
+    justify-content: center;
+ width: 100vw;
+ padding: 20px;
+}
+.top{
+display: flex;
+justify-content: space-evenly;
+ width: 100vw;
+ padding: 20px;
+}
+button{
+    font-size: large;
+    min-width:100px;
+    min-height:30px;
+    cursor:pointer;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.errorrow{
+    background-color:rgb(178, 32, 154);
+}
+.errorcolumn{
+    background-color:rgb(182, 255, 200);
+}
+.errorblock{
+    background-color:rgb(144, 153, 238);
+}
+@media only screen and (max-width: 480px) {
+
+    .board{
+        display: grid;
+        grid-template-columns: repeat(9,45px);
+        grid-template-rows: repeat(9,45px);
+        border:1px solid black;
+    }
+  }
+  @media only screen and (max-width: 425px) {
+
+    .board{
+        display: grid;
+        grid-template-columns: repeat(9,35px);
+        grid-template-rows: repeat(9,35px);
+        border:1px solid black;
+    }
+  }
